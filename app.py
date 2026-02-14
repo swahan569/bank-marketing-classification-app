@@ -12,6 +12,14 @@ st.set_page_config(page_title="Bank Marketing Classification", layout="wide")
 
 st.title("Bank Marketing Classification App")
 
+with open("test.csv", "rb") as f:
+    st.download_button(
+        label="Download Sample Test Data",
+        data=f,
+        file_name="test_data.csv",
+        mime="text/csv"
+    )
+
 st.write("Upload test dataset and select a trained model to evaluate performance.")
 
 # Load models
